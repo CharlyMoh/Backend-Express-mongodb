@@ -3,8 +3,8 @@ const Ubication = require('../models/ubication.model');
 // Funcion para agregar una ubicación
 const addUbication = async (req, res) => {
     try {
-        const ubication = await ubication.create(req.body);
-        res.status(200).json(Article);
+        const Ubication = await ubication.create(req.body);
+        res.status(200).json(Ubication);
     } catch (error) {
         res.status(500).json({message: 'Ocurrió un error' + error.message})
     }
@@ -14,7 +14,7 @@ const addUbication = async (req, res) => {
 const updateUbicationById = async () => {
     try {
         const {id} = req.params;
-        const Ubication = await Article.findByIdAndUpdate (id, req.body);
+        const Ubication = await Ubication.findByIdAndUpdate (id, req.body);
         if(!Ubication)
             return res.status(400).json({ message: 'La ubucación no existe'});
         const UpdatedUbication = await Ubication.find({'_id': id});

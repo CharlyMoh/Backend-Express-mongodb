@@ -21,11 +21,11 @@ const UbicationSchema = mongoose.Schema({
         required: true
     },
     neighborhood: {
-        type: Name,
+        type: String,
         required: true
     },
     city: {
-        type: Name,
+        type: String,
         required: true
     },
     state: {

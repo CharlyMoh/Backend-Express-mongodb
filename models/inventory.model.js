@@ -1,4 +1,4 @@
-const mongoose = required('mongoose');
+const mongoose = require('mongoose');
 const InventorySchema = mongoose.Schema({
     name: {
         type: String,
