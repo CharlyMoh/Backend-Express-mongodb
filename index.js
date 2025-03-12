@@ -42,7 +42,8 @@ app.use('/api/inventories', inventoryRoute);
 
 
 // Realizar petición de conexión a mongodb
-mongoose.connect('mongodb://localhost:27017/MyDatabase')
+// mongoose.connect('mongodb://localhost:27017/MyDatabase')
+mongoose.connect('mongodb+srv://2311081111:GJEvr6JZXiqlC6Cg@clusterappmovil.inadn.mongodb.net/?retryWrites=true&w=majority&appName=ClusterAppMovil/MyDatabase')
 .then( () => {
     console.log('Se estableció la conexión a base de datos exitosamente');
     app.listen( 3000, () => {
