@@ -1,50 +1,26 @@
-const mongoose = required('mongoose');
-const InventorySchema2 = mongoose.Schema({
+const mongoose = require('mongoose');
+const InventarySchema = mongoose.Schema({
     name: {
         type: String,
-        requried: true
-    },
-    date: {
-        type: Date,
         required: true
-    },
-    personInCharge: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Person',
-    required: true
-    },
-    registrationDate: {
-        type: Date,
-        required: true
-    },
-    state: {
-        type: Boolean,
-        required: true
-    }
-});
-
-const InventorySchema = mongoose.Schema({
-    name: {
-        type: String,
-        requried: true
     },
     startDate: {
         type: Date,
-        required: true
+        required:true
     },
     endDate: {
         type: Date,
+        required:true
+    },
+    userInCharge:{
+        type: String,
         required: true
     },
-    personInCharge: {
-    type: String,
-    required: true
-    },
-    registrationDate: {
+    registration: {
         type: Date,
         default: Date.now
     }
-});
+})
 
-const Inventory = mongoose.model('Inventory', InventorySchema);
-module.exports = Inventory;
+const Inventary = mongoose.model('Inventary', InventarySchema);
+module.exports = Inventary;
