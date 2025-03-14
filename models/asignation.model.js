@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const AsignationSchema = mongoose.Schema({
+const AsignationSchema2 = mongoose.Schema({
     personId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Person',
@@ -33,34 +33,38 @@ const AsignationSchema = mongoose.Schema({
     }
 });
 
-const AsignationSchema2 = mongoose.Schema({
-    personId: {
-        type: Number,
+const AsignationSchema = mongoose.Schema({
+    person: {
+        type: String,
         requried: true
     },
-    articleID: {
-        type: Number,
+    article: {
+        type: String,
         required: true
     },
     observation: {
         type: String,
         reqired: true
     },
-    state: {
+    status: {
         type: Boolean,
         required: true
     },
-    startDate: {
+    assignmentStartDate: {
         type: Date,
         required: true
     },
-    endDate: {
+    assignmentEndDate : {
         type: Date,
         required: true
     },
-    personIdTask: {
-        type: Number,
+    user: {
+        type: String,
         required: true
+    },
+    registration: {
+        type: Date,
+        default: Date.now
     }
 });
 

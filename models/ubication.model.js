@@ -1,4 +1,32 @@
 const mongoose = require('mongoose');
+
+const AddressSchema = mongoose.Schema({
+    street: {
+        type: String,
+        required: true
+    },
+    number: {
+        type: String, 
+        required: true
+    },
+    neighborhood: {
+        type: String,
+        required: true
+    },
+    city: {
+        type: String,
+        required: true
+    },
+    zipcode: {
+        type: String,
+        required: true
+    },
+    country: {
+        type: String, 
+        required: true
+    }
+});
+
 const UbicationSchema = mongoose.Schema({
     building: {
         type: String,
@@ -8,38 +36,18 @@ const UbicationSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    addres: {
+        type: AddressSchema,
+        required: true
+    },
     departmentName: {
         type: String,
         required: true
     },
-    street: {
-        type: String,
-        required: true
+    registration: {
+        type: Date,
+        default: Date.now
     },
-    number: {
-        type: Number,
-        required: true
-    },
-    neighborhood: {
-        type: Name,
-        required: true
-    },
-    city: {
-        type: Name,
-        required: true
-    },
-    state: {
-        type: String,
-        required: true
-    },
-    CP: {
-        type: String,
-        requried: true
-    },
-    country: {
-        type: String,
-        required: true
-    }
 });
 
 const Ubication = mongoose.model('Ubication', UbicationSchema);

@@ -24,6 +24,8 @@ const updateInventoryById = async () => {
     }
 }
 
+
+
 // Funcion para eliminar un inventario
 const deleteInventoryById = async(req, res) => {
     try{

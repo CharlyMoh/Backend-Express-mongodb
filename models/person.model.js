@@ -4,10 +4,6 @@ const PersonSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    secondName:{
-        type: String,
-        required: false
-    },
     lastName: {
         type: String,
         required : true
@@ -16,17 +12,21 @@ const PersonSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    phoneNumber: {
+    phone: {
         type: String,
         required: true 
     },
-    landline: {
+    mobile: {
         type: String,
         required: true
     },
     email: {
         type: String,
         required: false
+    },
+    registration: {
+        type: Date,
+        required: Date.now
     }
 });
 

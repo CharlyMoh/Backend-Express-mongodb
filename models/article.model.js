@@ -4,7 +4,11 @@ const ArticleSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    typeArticle: {
+    code: {
+        type: String,
+        required: true
+    },
+    type: {
         type: String,
         required: true
     },
@@ -17,12 +21,12 @@ const ArticleSchema = mongoose.Schema({
         required: true
     },
     ubication: {
-        type: String,
+        type: Number,
         required: true
     },
-    updateDate: {
+    registration: {
         type: Date,
-        required: true
+        default: Date.now
     }
 });
 

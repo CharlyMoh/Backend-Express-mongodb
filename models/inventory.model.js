@@ -1,5 +1,5 @@
 const mongoose = required('mongoose');
-const InventorySchema = mongoose.Schema({
+const InventorySchema2 = mongoose.Schema({
     name: {
         type: String,
         requried: true
@@ -23,26 +23,26 @@ const InventorySchema = mongoose.Schema({
     }
 });
 
-const InventorySchema2 = mongoose.Schema({
+const InventorySchema = mongoose.Schema({
     name: {
         type: String,
         requried: true
     },
-    date: {
+    startDate: {
+        type: Date,
+        required: true
+    },
+    endDate: {
         type: Date,
         required: true
     },
     personInCharge: {
-    type: Number,
+    type: String,
     required: true
     },
     registrationDate: {
         type: Date,
-        required: true
-    },
-    state: {
-        type: Boolean,
-        required: true
+        default: Date.now
     }
 });
 
